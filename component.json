@@ -10,7 +10,6 @@
   ],
   "development": {
     "visionmedia/mocha": "^1.18.2",
-    "timoxley/assert": "~0.0.1",
-    "alex-seville/blanket": "*"
+    "timoxley/assert": "~0.0.1"
   }
 }
