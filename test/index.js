@@ -35,6 +35,22 @@ describe('scope', function() {
         assert.equal(scope()._parent, null);
     });
 
+    it('should add a parent scope', function() {
+        var e = scope();
+        var s = scope().parent(e);
+        assert.equal(s._parent, e);
+    });
 
+    it('should add a child scope', function() {
+        var child = scope();
+        var s = scope().child(child);
+        assert.equal(s.children.length, 1);
+        assert.equal(s.children[0], child);
+    });
+
+    it('should add a new attribute', function() {
+        var s = scope().attr('foo', 123);
+        assert.equal(s.props.foo, 123);
+    });
 
 });

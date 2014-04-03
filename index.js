@@ -48,4 +48,5 @@ Scope.prototype.child = function(scope) {
 
 Scope.prototype.attr = function(key, value) {
     this.props[key] = value;
+    return this;
 };
