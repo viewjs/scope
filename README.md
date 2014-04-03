@@ -1,4 +1,5 @@
 # Scope
+[![Build Status](https://travis-ci.org/viewjs/scope.svg)](https://travis-ci.org/viewjs/scope)
 
 A view scope represents an isolation within templates. Often times, you have many different areas that have either completely different scoping then others.
 
