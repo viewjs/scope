@@ -1,0 +1,15 @@
+{
+  "name": "scope",
+  "version": "0.0.1",
+  "repo": "viewjs/scope",
+  "contributors": [
+    "Daniel Fagnan <dnfagnan@gmail.com>"
+  ],
+  "scripts": [
+    "index.js"
+  ],
+  "development": {
+    "visionmedia/mocha": "^1.18.2",
+    "timoxley/assert": "~0.0.1"
+  }
+}
