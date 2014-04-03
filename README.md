@@ -1,4 +1,4 @@
-# Scope [![Build Status](https://travis-ci.org/viewjs/scope.svg)](https://travis-ci.org/viewjs/scope) [![Coverage Status](https://coveralls.io/repos/viewjs/scope/badge.png)](https://coveralls.io/r/viewjs/scope)
+# Scope [![Build Status](https://travis-ci.org/viewjs/scope.svg)](https://travis-ci.org/viewjs/scope) [![Coverage Status](https://coveralls.io/repos/viewjs/scope/badge.png)](https://coveralls.io/r/viewjs/scope) [![GitHub version](https://badge.fury.io/gh/viewjs%2Fscope.svg)](http://badge.fury.io/gh/viewjs%2Fscope)
 
 A view scope represents an isolation within templates. Often times, you have many different areas that have either completely different scoping then others.
 
