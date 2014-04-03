@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "repository": "git@github.com:viewjs/scope.git",
   "devDependencies": {
-    "visionmedia/mocha": "*"
+    "mocha": "*"
   }
 }
