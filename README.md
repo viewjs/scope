@@ -28,22 +28,22 @@ Attach a parent to it:
 
 ```js
 scope()
-    .parent(scope());
+  .parent(scope());
 ```
 
 Childrens:
 
 ```js
 scope()
-    .child(scope());
+  .child(scope());
 ```
 
 Finally, add attributes:
 
 ```js
 scope()
-    .attr('foo', 123)
-    .attr('name', 'John')
+  .attr('foo', 123)
+  .attr('name', 'John')
 ```
 
 ## Testing
