@@ -79,7 +79,7 @@ Scope.prototype.child = function(scope) {
  * @chainable
  */
 
-Scope.prototype.set = function(key, value) {
+Scope.prototype.set = Scope.prototype.attr = function(key, value) {
   this.props[key] = value;
   return this;
 };
@@ -92,5 +92,9 @@ Scope.prototype.set = function(key, value) {
  */
 
 Scope.prototype.get = function(key) {
-  return this.props[key];
+  return !!this.props[key] 
+    ? this.props[key]
+    : !!this._parent
+      ? this._parent.get(key)
+      : undefined;
 };

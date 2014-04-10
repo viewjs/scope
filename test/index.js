@@ -58,7 +58,18 @@ describe('scope', function() {
   });
 
   it('should get a an existing attribute after setting one.', function() {
-    var s = scope().set('foo')
+    var s = scope().set('foo', 123);
+    assert.equal(s.get('foo'), 123);
+  });
+
+  it('should bubble a getter request up to the most parent scope', function() {
+    var parentA = scope().set('dyno', 5);
+    var parentB = scope().parent(parentA).set('hello', 10);
+    var child   = scope().parent(parentB).set('world', 55);
+
+    assert.equal(child.get('world'), 55);
+    assert.equal(child.get('hello'), 10);
+    assert.equal(child.get('dyno'), 5);
   });
 
 });

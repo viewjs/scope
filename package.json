@@ -1,6 +1,8 @@
 {
   "name": "viewjs-scope",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "author": "Daniel Fagnan <dnfagnan@gmail.com>",
+  "license": "MIT",
   "repository": "git@github.com:viewjs/scope.git",
   "devDependencies": {
     "mocha": "*"
