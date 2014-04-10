@@ -42,8 +42,8 @@ Finally, add attributes:
 
 ```js
 scope()
-  .attr('foo', 123)
-  .attr('name', 'John')
+  .set('foo', 123)
+  .set('name', 'John')
 ```
 
 ## Testing
