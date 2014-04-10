@@ -1,4 +1,4 @@
-exports = module.exports = scope;
+exports       = module.exports = scope;
 exports.Scope = Scope;
 
 /**
@@ -14,7 +14,7 @@ exports.Scope = Scope;
  */
 
 function scope() {
-    return new Scope();
+  return new Scope();
 }
 
 /**
@@ -31,22 +31,66 @@ function scope() {
  */
 
 function Scope() {
-    this._parent = null;
-    this.children = [];
-    this.props = {};
+  this._parent = null;
+  this.children = [];
+  this.props = {};
 }
 
+/**
+ * Add a parent scope.
+ *
+ * @param {Scope} scope
+ * @return {Scope}
+ * @chainable
+ */
+
 Scope.prototype.parent = function(scope) {
-    this._parent = scope;
-    return this;
+  if (!(scope instanceof Scope)) {
+    throw new Error("A parent scope must be a scope instance.");
+  }
+
+  this._parent = scope;
+  return this;
 };
+
+/**
+ * Add a new child scope.
+ *
+ * @param {Scope} scope
+ * @return {Scope}
+ * @chainable
+ */
 
 Scope.prototype.child = function(scope) {
-    this.children.push(scope);
-    return this;
+  if (!(scope instanceof Scope)) {
+    throw new Error("A child scope must be a scope instance.");
+  }
+
+  this.children.push(scope);
+  return this;
 };
 
-Scope.prototype.attr = function(key, value) {
-    this.props[key] = value;
-    return this;
+/**
+ * Set a property on the scope.
+ *
+ * @param {String} key
+ * @param {Any} value
+ * @return {Scope}
+ * @chainable
+ */
+
+Scope.prototype.set = function(key, value) {
+  this.props[key] = value;
+  return this;
+};
+
+/**
+ * Return an existing property.
+ *
+ * @param {String} key
+ * @return {Any}
+ */
+
+Scope.prototype.get = function(key) {
+  return this.props[key];
 };
