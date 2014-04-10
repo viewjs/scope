@@ -1,4 +1,6 @@
-var scope = require('scope');
+var scope = 'undefined' === typeof window
+  ? require('..')
+  : require('scope');
 var assert = require('assert');
 
 describe('scope', function() {

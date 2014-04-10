@@ -1,6 +1,8 @@
 # Scope [![Build Status](https://travis-ci.org/viewjs/scope.svg)](https://travis-ci.org/viewjs/scope) [![GitHub version](https://badge.fury.io/gh/viewjs%2Fscope.svg)](http://badge.fury.io/gh/viewjs%2Fscope)
 
-A view scope represents an isolation within templates. Often times, you have many different areas that have either completely different scoping then others.
+A scope represents an isolation within templates. Often times, you have many different areas that have completely different scoping then others.
+
+Common examples are iterations, sub-views, directives, etc... Each scope may have many child scopes, and a single parent scope, creating a tree. This allows scopes to bubble up, and could possibly lead to certain bubble rules.
 
 ## Getting Started
 
